@@ -1,0 +1,16 @@
+{
+  "name": "Sadath Khan | Portfolio",
+  "short_name": "Sadath Khan",
+  "description": "Sadath Khan's developer portfolio",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#030712",
+    "theme_color": "#030712",
+    "icons": [
+        {
+            "src": "favicon.ico",
+            "sizes": "32x32 24x24 16x16",
+            "type": "image/x-icon"
+        }
+    ]
+}
