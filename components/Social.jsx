@@ -1,3 +1,5 @@
+"use client";
+
 import Link from "next/link";
 import {
   FaGithub,
@@ -30,10 +32,27 @@ const socials = [
 ];
 
 const Social = ({ containerStyles, iconStyles }) => {
+  const handleEmailClick = (event) => {
+    event.preventDefault();
+
+    const isMobile = /Android|iPhone|iPad|iPod/i.test(
+      navigator.userAgent
+    );
+
+    if (isMobile) {
+      window.location.href = "mailto:sadathkhan717@gmail.com";
+    } else {
+      window.open(
+        "https://mail.google.com/mail/?view=cm&fs=1&to=sadathkhan717@gmail.com",
+        "_blank"
+      );
+    }
+  };
+
   return (
     <div className={containerStyles}>
       {socials.map((item, index) => {
-        const isEmail = item.path.startsWith("mailto:");
+        const isEmail = item.label === "Email";
 
         return (
           <Link
@@ -41,6 +60,7 @@ const Social = ({ containerStyles, iconStyles }) => {
             href={item.path}
             aria-label={item.label}
             className={iconStyles}
+            onClick={isEmail ? handleEmailClick : undefined}
             {...(!isEmail && {
               target: "_blank",
               rel: "noopener noreferrer",
