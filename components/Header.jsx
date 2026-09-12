@@ -36,7 +36,7 @@ export default function Header() {
         </div>
 
         <div className="xl:hidden">
-          <MobileNav />
+          <MobileNav onContactClick={() => setContactOpen(true)} />
         </div>
       </div>
 
