@@ -70,7 +70,7 @@ const Home = () => {
               </Link>
 
               <a
-                href="/Sadath_Khan_Resume.pdf"
+                href="/Sadath_khan_Resume.pdf"
                 download
                 className="cursor-pointer"
                 aria-label="Download CV"
